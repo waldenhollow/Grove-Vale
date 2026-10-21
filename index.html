@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Walden Hollow</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Zachary Walden: product manager, guitarist and maker of warm, nostalgic audio tools.">
+<meta name="theme-color" content="#3b2618">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400,100;0,9..144,600,100;0,9..144,800,100;1,9..144,500,100&family=Courier+Prime:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Layout: a walnut-paneled hero like a 90s farmhouse den, then cream "paper" pages below; one column, generous margins */
+:root{
+  color-scheme: light;
+  --walnut:#3b2618;
+  --walnut-2:#55382a;
+  --paper:#f6ecd8;
+  --paper-2:#efe2c6;
+  --ink:#2e2118;
+  --ink-soft:#6b5643;
+  --maple:#c4622d;
+  --vale:#4f6b7a;
+  --gold:#e0a63a;
+  --barn:#8e2f25;
+  --cream:#f3e6cc;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Source Serif 4",Georgia,serif;
+  --type:"Courier Prime","Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--barn)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.gutter{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.inner{max-width:760px;margin:0 auto}
+
+/* hero */
+.hero{
+  background-color:var(--walnut);color:var(--cream);position:relative;overflow:hidden;
+  background-image:
+    repeating-linear-gradient(90deg,#0000 0 58px,#0000002e 58px 60px,#ffffff08 60px 61px),
+    repeating-linear-gradient(90deg,#ffffff05 0 3px,#00000008 3px 9px,#ffffff03 9px 14px);
+  padding-top:calc(env(safe-area-inset-top,0px) + 48px);padding-bottom:0;
+}
+.eyebrow{font-family:var(--type);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.hero h1{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:800;font-size:clamp(44px,11vw,76px);line-height:.95;margin:0;letter-spacing:-.02em;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold)}
+.hero .lede{font-size:clamp(18px,4.4vw,21px);max-width:34em;margin:20px 0 26px;color:#ecdcbd}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  font-family:var(--type);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  padding:13px 18px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;min-height:46px
+}
+.btn.primary{background:var(--cream);color:var(--walnut);box-shadow:0 3px 0 #0006}
+.btn.ghost{color:var(--cream);box-shadow:inset 0 0 0 1.5px #f3e6cc66}
+.scene{display:block;width:100%;height:auto;margin-top:40px}
+
+/* sections */
+section.block{padding-block:56px 8px}
+h2{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:800;font-size:clamp(30px,7vw,40px);line-height:1.05;margin:0 0 8px;letter-spacing:-.01em;text-wrap:balance}
+.sub{font-family:var(--type);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 26px}
+p{margin:0 0 14px}
+
+/* featured project */
+.feature{
+  display:grid;grid-template-columns:1fr;gap:0;border-radius:18px;overflow:hidden;
+  background:var(--walnut);color:var(--cream);box-shadow:0 14px 30px #3b26183a;
+}
+.feature .art{display:flex;gap:10px;padding:22px 18px 6px;background:linear-gradient(165deg,#4a3020,var(--walnut))}
+.mini{flex:1;border-radius:12px;padding:12px 12px 14px;color:#fff6e6;position:relative;box-shadow:inset 0 1px 0 #ffffff35,0 6px 12px #0006}
+.mini.g{background:linear-gradient(165deg,#dc7a3c,var(--maple))}
+.mini.v{background:linear-gradient(165deg,#6a8798,var(--vale))}
+.mini b{font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:24px;display:block;line-height:1}
+.mini small{font-family:var(--type);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+.mini .dots{display:flex;gap:8px;margin-top:12px}
+.mini .dots i{width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#5a3d2a,#241710 72%);box-shadow:0 2px 0 #0006}
+.feature .copy{padding:20px 20px 24px}
+.feature h3{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:800;font-size:30px;margin:0 0 6px;line-height:1.05}
+.feature h3 .amp{color:var(--gold);font-style:italic;font-weight:500}
+.feature p{color:#ecdcbd}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 18px;padding:0;list-style:none}
+.tags li{font-family:var(--type);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;box-shadow:inset 0 0 0 1px currentColor;opacity:.85}
+
+/* project list */
+.projects{display:grid;gap:14px;margin-top:18px}
+.proj{background:var(--paper-2);border-radius:14px;padding:18px 18px 16px}
+.proj h3{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:600;font-size:22px;margin:0 0 4px;line-height:1.2}
+.proj .kind{font-family:var(--type);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--maple);margin-bottom:8px;display:block}
+.proj p{font-size:16px;margin:0}
+
+/* lineup */
+.lineup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
+.chip{border-radius:12px;padding:12px 14px;border:1.5px dashed #6b564366}
+.chip b{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:600;font-size:19px;display:block;line-height:1.15}
+.chip span{font-family:var(--type);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.chip.live{border:0;background:var(--walnut);color:var(--cream)}
+.chip.live span{color:var(--gold)}
+
+/* experience timeline */
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.timeline li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px}
+.when{font-family:var(--type);font-size:13px;color:var(--ink-soft);padding-top:4px;font-variant-numeric:tabular-nums}
+.timeline h3{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:600;font-size:21px;margin:0;line-height:1.25}
+.timeline .org{font-family:var(--type);font-size:13px;color:var(--maple);display:block;margin:2px 0 8px;letter-spacing:.04em}
+.timeline p{font-size:16px}
+@media (max-width:520px){ .timeline li{grid-template-columns:1fr;gap:2px} }
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.skills h3{font-family:var(--type);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 8px}
+.skills ul{margin:0;padding-left:18px;font-size:16px}
+.skills li{margin-bottom:3px}
+
+.about{display:grid;gap:4px}
+.about p{font-size:18px;max-width:36em}
+
+footer{margin-top:64px;background:var(--walnut);color:#d9c6a3;padding-block:34px calc(env(safe-area-inset-bottom,0px) + 34px)}
+footer .inner{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:baseline}
+footer a{color:var(--cream)}
+footer .sig{font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:22px;color:var(--cream);font-weight:600}
+footer small{font-family:var(--type);font-size:12px;letter-spacing:.1em}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="gutter"><div class="inner">
+    <p class="eyebrow">Walden Hollow · Long Island, NY</p>
+    <h1>Zachary Walden<br><em>makes warm things</em></h1>
+    <p class="lede">Product manager, fingerstyle guitarist and audio engineer. I spent eight years shipping music products at D'Addario, and now I build cozy, nostalgic audio tools for players.</p>
+    <div class="btns">
+      <a class="btn primary" href="grove-and-vale.html">Try Grove &amp; Vale</a>
+      <a class="btn ghost" href="#work">See my work</a>
+    </div>
+  </div></div>
+  <!-- the hollow: rolling hills, a maple grove and a farmhouse at golden hour -->
+  <svg class="scene" viewBox="0 0 800 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <circle cx="610" cy="70" r="34" fill="#e0a63a" opacity=".9"/>
+    <path d="M0 110 Q140 60 300 100 T620 92 T800 84 V170 H0Z" fill="#55382a"/>
+    <g fill="#c4622d"><circle cx="90" cy="96" r="26"/><circle cx="130" cy="84" r="32"/><circle cx="172" cy="100" r="22"/></g>
+    <g fill="#2a1a10"><rect x="87" y="112" width="5" height="30"/><rect x="127" y="104" width="6" height="40"/><rect x="169" y="114" width="5" height="28"/></g>
+    <g transform="translate(470 92)">
+      <path d="M0 26 L30 0 L60 26 V58 H0Z" fill="#f3e6cc"/>
+      <path d="M-6 28 L30 -4 L66 28" fill="none" stroke="#8e2f25" stroke-width="7" stroke-linejoin="round"/>
+      <rect x="10" y="32" width="12" height="12" fill="#e0a63a"/><rect x="38" y="32" width="12" height="12" fill="#e0a63a"/>
+      <rect x="25" y="40" width="10" height="18" fill="#8e2f25"/>
+    </g>
+    <path d="M0 140 Q200 110 420 138 T800 128 V170 H0Z" fill="#4f6b7a"/>
+    <path d="M0 158 Q260 136 520 156 T800 150 V170 H0Z" fill="#f6ecd8"/>
+  </svg>
+</header>
+
+<main>
+  <section class="block gutter" id="work"><div class="inner">
+    <h2>Featured project</h2>
+    <p class="sub">An acoustic effects app for iPhone</p>
+
+    <article class="feature">
+      <div class="art" aria-hidden="true">
+        <div class="mini g"><small>Reverb</small><b>Grove</b><div class="dots"><i></i><i></i><i></i></div></div>
+        <div class="mini v"><small>Echo</small><b>Vale</b><div class="dots"><i></i><i></i><i></i></div></div>
+      </div>
+      <div class="copy">
+        <h3>Grove <span class="amp">&amp;</span> Vale</h3>
+        <p>Rest your phone on the top of your acoustic, speaker toward the sound hole, and play. Grove &amp; Vale listens through the wood and sends warm reverb and echoes back into the body, so the guitar blooms like it's in a big room. No cables, no amp.</p>
+        <ul class="tags"><li>Web Audio</li><li>JavaScript</li><li>Mobile UI</li><li>DSP</li></ul>
+        <a class="btn primary" href="grove-and-vale.html">Open the app</a>
+      </div>
+    </article>
+
+    <div class="projects">
+      <article class="proj">
+        <span class="kind">Audio plug-in · C++ / JUCE</span>
+        <h3>String tuning &amp; creep logger</h3>
+        <p>During a nylon string quality investigation at D'Addario, I built an AU/VST3 plug-in that tracked tuning at high speed and logged how strings drifted over time. It ran alongside three physical test rigs I set up with R&amp;D and Engineering to measure how accurately the material had been made.</p>
+      </article>
+      <article class="proj">
+        <span class="kind">Live performance · Logic Pro</span>
+        <h3>Backing-track system for my wedding band</h3>
+        <p>I build the multitrack stems our band plays with two to four nights a week, including spoken countdowns and song-section cues so the drummer and I always know where we are in the song.</p>
+      </article>
+      <article class="proj">
+        <span class="kind">Product management · D'Addario</span>
+        <h3>Artist collaboration products</h3>
+        <p>Worked with artists including Jacob Collier, Yvette Young, Joe Satriani, Julian Lage and Gary Clark Jr. to shape licensing deals and build the co-branded products that came out of them.</p>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="block gutter" id="lineup"><div class="inner">
+    <h2>The Walden Hollow lineup</h2>
+    <p class="sub">Effects named for one perfect fall day in the country</p>
+    <p>Every effect I make lives on the same imagined property: a 90s farmhouse, a maple grove, a valley out back. Grove &amp; Vale is the first. More are on the way.</p>
+    <div class="lineup">
+      <div class="chip live"><b>Grove &amp; Vale</b><span>Reverb + echo · Live</span></div>
+      <div class="chip"><b>Hayloft</b><span>Reverb · Planned</span></div>
+      <div class="chip"><b>Mixtape</b><span>Tape delay · Planned</span></div>
+      <div class="chip"><b>Porch Swing</b><span>Tremolo · Planned</span></div>
+      <div class="chip"><b>VHS</b><span>Chorus · Planned</span></div>
+      <div class="chip"><b>Woodstove</b><span>Overdrive · Planned</span></div>
+    </div>
+  </div></section>
+
+  <section class="block gutter" id="experience"><div class="inner">
+    <h2>Experience</h2>
+    <p class="sub">Where the work comes from</p>
+    <ol class="timeline">
+      <li>
+        <div class="when">2018–2026</div>
+        <div>
+          <h3>Product Manager, Music Products &amp; Packaging</h3>
+          <span class="org">D'Addario &amp; Co.</span>
+          <p>Managed a $130M product portfolio and launched 200+ new products, from written specs and test protocols through manufacturing, packaging and launch. Ran 15+ projects at a time with engineering, R&amp;D, supply chain, marketing and outside manufacturers.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">15 years</div>
+        <div>
+          <h3>Live &amp; Studio Audio Engineer</h3>
+          <span class="org">Independent</span>
+          <p>Recording, mixing and mastering in Logic Pro, on Universal Audio gear, for my own projects and paid sessions.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">Ongoing</div>
+        <div>
+          <h3>Owner &amp; Vocalist</h3>
+          <span class="org">Wedding &amp; cover band, Long Island</span>
+          <p>Run the business and the show: booking, backing tracks, MIDI and lighting control, and singing.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">Earlier</div>
+        <div>
+          <h3>Master Control Operator</h3>
+          <span class="org">Rainbow Media Group</span>
+          <p>Kept live television on air: monitoring feeds, running playout and handling problems in real time.</p>
+        </div>
+      </li>
+    </ol>
+  </div></section>
+
+  <section class="block gutter" id="skills"><div class="inner">
+    <h2>Toolbox</h2>
+    <p class="sub">What I bring to a team</p>
+    <div class="skills">
+      <div><h3>Product</h3><ul><li>Requirements &amp; specs</li><li>New product introduction</li><li>Testing &amp; validation</li><li>Roadmaps &amp; business cases</li><li>Launch &amp; lifecycle</li></ul></div>
+      <div><h3>Audio</h3><ul><li>Logic Pro</li><li>JUCE, VST3 / AU</li><li>Web Audio</li><li>Recording, mixing, mastering</li><li>MIDI &amp; DMX for live shows</li></ul></div>
+      <div><h3>Tools</h3><ul><li>Power BI</li><li>C++ &amp; JavaScript</li><li>AI-assisted workflows</li><li>Agile delivery</li><li>Pragmatic Institute PMC VI</li></ul></div>
+    </div>
+  </div></section>
+
+  <section class="block gutter" id="about"><div class="inner about">
+    <h2>About</h2>
+    <p>I'm a dad of two, a fingerstyle player and a lifelong fan of fall. I studied Recording Arts and Business at Five Towns College, and I've spent my career where music, engineering and making real products meet. Walden Hollow is where I build the tools I wish I had on the porch.</p>
+  </div></section>
+</main>
+
+<footer class="gutter">
+  <div class="inner">
+    <div>
+      <div class="sig">Zachary Walden</div>
+      <small>Long Island, NY</small>
+    </div>
+    <div>
+      <small><a href="https://www.linkedin.com/in/zachtylerwalden" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:zacharytylerwalden@gmail.com">zacharytylerwalden@gmail.com</a></small>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
